@@ -21,14 +21,7 @@ namespace SchoolLibrary
             get { return _twitterAddress; }
             set
             {
-                if (value.StartsWith("@")
-                {
-                    _twitterAddress = value;
-                }
-                else
-                {
-                    throw new Exception("The twitter address must begin with @");
-                }
+                _twitterAddress = value.StartsWith("@") ? value : throw new Exception("The twitter address must begin with @");
             }
         }
         public School()
