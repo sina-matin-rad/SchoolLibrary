@@ -48,11 +48,24 @@ namespace SchoolLibrary
         //    var result = (a + b + c) / 3;
         //    return result;
         //}
-        public float AverageThreeScores(float a, float b, float c) => (a + b + c) / 3;
-        public int AverageThreeScores(int a, int b, int c)
+        public static float AverageThreeScores(float a, float b, float c) => (a + b + c) / 3;
+
+        public  static int AverageThreeScores(int a, int b, int c)
         {
+          
             var result = (a + b + c) / 3;
             return result;
+        }
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(this.Name);
+            sb.AppendLine(this.Address);
+            sb.AppendLine(this.City);
+            sb.Append(State);
+            sb.Append(",");
+            sb.Append(Zip);
+            return sb.ToString();
         }
     }
 }
